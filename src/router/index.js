@@ -1,25 +1,45 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from '@/views/Home.vue';
+import UserRouter from './UserRouter';
+import MenuRouter from './MenuRouter';
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
     mode: 'history',
     base: process.env.BASE_URL,
     routes: [
         {
-            path: '/',
-            name: 'home',
-            component: Home,
+            path: '/a',
+            component: () => import('@/views/a.vue'),
         },
         {
-            path: '/about',
-            name: 'about',
-            // route level code-splitting
-            // this generates a separate chunk (about.[hash].js) for this route
-            // which is lazy-loaded when the route is visited.
-            component: () => import(/* webpackChunkName: "about" */ '@/views/About.vue'),
+            path: '/b',
+            component: () => import('@/views/About.vue'),
         },
+        {
+            path: '/test',
+            component: () => import('@/components/test.vue'),
+        },
+        ...MenuRouter,
+        ...UserRouter,
     ],
 });
+router.beforeEach((to, form, next) => {
+    next();
+});
+export default router;
+/*
+* 路由懒加载
+
+const login = r => require.ensure([], () => r(require('@/views/auth/login')), 'login'); //登录
+const register = r => require.ensure([], () => r(require('@/views/auth/register')), 'register'); //注册
+export default new Router({
+  routes: [
+		{path: '/home ',name: 'home ',component: home ,meta: {title: 'home',requireAuth:true}},
+		{path: '/about ',name: 'about ',component: about ,meta: {title: '关于',requireAuth:true}},
+  ]
+})
+
+
+* */

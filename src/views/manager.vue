@@ -1,11 +1,12 @@
 <template>
-    <div>About
-    </div>
+    <layout>
+        manager
+    </layout>
 </template>
 
 <script>
     export default {
-        name: 'About',
+        name: 'manager',
         data() {
             return {};
         },

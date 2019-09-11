@@ -1,0 +1,12 @@
+.el-scrollbar__thumb {
+  display: none;
+}
+
+.el-scrollbar__wrap {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.el-scrollbar {
+  height: 100%;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="a">id=a
+    <div id="b">id=b</div>
+    <div id="my">id=my
+        <div id="c">
+            id=c
+            <div id="d">id=d</div>
+        </div>
+        <div id="c1">id=c1</div>
+        <div id="e">id=e</div>
+    </div>
+    <div id="f">id=f</div>
+    <div id="g">id=g</div>
+</div>
+<script type="text/javascript">
+    /*
+    * 关于引用相关节点
+    * parentNode 父节点
+    * childNodes 子节点列表
+    * firstChild 第一个子节点
+    * lastChild 最后一个子节点
+    * nextSibling 下一个兄弟节点
+    * previousSibling 上一个兄弟节点
+
+    ===>nextSibling属性与nextElementSibling属性的差别：
+        nextSibling属性返回元素节点之后的兄弟节点（包括文本节点、注释节点即回车、换行、空格、文本等等）；
+        nextElementSibling属性只返回元素节点之后的兄弟元素节点（不包括文本节点、注释节点）；
+         注意: 空格、回车也会看作文本，以文本节点对待。
+
+
+        属性名 能够获取的元素
+            children 子元素节点列表
+            firstElementChild 第一个子元素
+            lastElementChild 最后一个子元素
+            nextElementSibling 下一个元素
+            previousElementSibling 上一个元素
+            childElementCount 子元素的数量
+    *
+    *
+    *
+    * */
+    let my = document.getElementById('my');
+    let elem;
+    console.log('父节点', my.parentNode);
+    console.log('子节点列表:', my.childNodes);
+    console.log('下一个兄弟节点:', my.nextSibling);
+    console.log('上一个兄弟节点:', my.previousSibling, my.previousElementSibling);
+    console.log('第一个子节点:', my.firstChild.id, my.firstElementChild.id);
+    console.log('最后一个子节点:', my.lastChild.id, my.lastElementChild.id);
+    console.log('---------');
+    console.log('子元素节点列表:children=>', my.children);
+    console.log('子元素的数量:子元素的数量=>', my.childElementCount);
+</script>
+</body>
+</html>

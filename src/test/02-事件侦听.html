@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="foo">点击</div>
+<button id="btn">   ■ 事件侦听器对象</button>
+<script type="text/javascript">
+    /*var btn = document.getElementById('foo');
+
+    function sayFoo() {
+        alert('foo');
+    }
+
+    function sayBar() {
+        alert('bar');
+    }
+
+    function sayBaz() {
+        alert('baz');
+    }
+
+    btn.addEventListener('click', sayFoo, false);
+    btn.addEventListener('click', sayBar, false);
+    btn.addEventListener('click', sayBaz, false);
+    btn.addEventListener('click', sayFoo, false); // 根据规则，这次注册将被忽略*/
+
+    var btn = document.getElementById('btn');
+    let eventListener = {
+        msg: 'Hello Word!',
+        handleEvent(e) {
+            console.log(this.msg, e);
+        },
+    };
+    btn.addEventListener('click', eventListener, false);
+
+
+    console.log('----------');
+
+    function sayFoo(e) {
+        alert('foo');
+        e.stopPropagation();
+    }
+
+    function sayBar(e) {
+        alert('bar');
+        e.stopImmediatePropagation();
+    }
+
+    function sayBaz() {
+        alert('baz');
+    }
+
+    btn.addEventListener('click', sayFoo, false);
+    btn.addEventListener('click', sayBar, false);
+    btn.addEventListener('click', sayBaz, false);
+    btn.addEventListener('click', sayFoo, false);
+
+</script>
+</body>
+</html>
