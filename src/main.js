@@ -3,17 +3,23 @@ import App from './App.vue';
 import router from './router/index';
 import store from './store/index';
 import iview from 'iview';
-import 'iview/dist/styles/iview.css';
 import i18n from './lang/';
 import Layout from '@/components/layout/layout.vue';
+import BaseLayout from './layouts/baseLayout';
 // Element
 import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
 import './styles/index.scss';
 
+
 Vue.component('layout', Layout);
+Vue.component('BaseLayout', BaseLayout);
 Vue.use(ElementUI);
 Vue.use(iview);
+
+//  菜单收起文字无法隐藏
+import Fragment from 'vue-fragment';
+
+Vue.use(Fragment.Plugin);
 Vue.config.productionTip = false;
 
 new Vue({

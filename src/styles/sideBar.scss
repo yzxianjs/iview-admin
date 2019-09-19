@@ -1,0 +1,49 @@
+.baseContainer {
+  .sideBar {
+    height: 100%;
+    background-color: #161C2A;
+    overflow: hidden;
+    .el-scrollbar {
+      overflow: hidden;
+    }
+    .scrollbar-wrapper {
+      overflow-x: hidden !important;
+    }
+    .logo {
+      height: 60px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .icon {
+        font-size: 20px;
+        color: aqua;
+      }
+      h1 {
+        color: #fff;
+        margin-left: 6px;
+      }
+    }
+    .el-menu-vertical-demo {
+      height: calc(100% - 60px);
+      width: 100%;
+      background: none;
+    }
+  }
+}
+
+/*关闭侧边栏*/
+.hideSideBar {
+  .sideBar {
+    width: 60px;
+    transition: width .5s ease-in-out;
+  }
+}
+
+/*开启侧边栏*/
+.openSideBar {
+  .sideBar {
+    width: 210px;
+    transition: width .5s ease-in-out;
+  }
+}

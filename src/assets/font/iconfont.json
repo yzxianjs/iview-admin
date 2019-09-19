@@ -1,0 +1,51 @@
+{
+  "id": "1400590",
+  "name": "ant",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "826073",
+      "name": "web",
+      "font_class": "web",
+      "unicode": "e6fa",
+      "unicode_decimal": 59130
+    },
+    {
+      "icon_id": "7204913",
+      "name": "Web",
+      "font_class": "Web",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "7239814",
+      "name": "menu-unfold",
+      "font_class": "menu-unfold",
+      "unicode": "e73e",
+      "unicode_decimal": 59198
+    },
+    {
+      "icon_id": "7239816",
+      "name": "menu-fold",
+      "font_class": "menu-fold",
+      "unicode": "e73f",
+      "unicode_decimal": 59199
+    },
+    {
+      "icon_id": "7611330",
+      "name": "admin",
+      "font_class": "admin",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "10691034",
+      "name": "规则",
+      "font_class": "guize",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    }
+  ]
+}

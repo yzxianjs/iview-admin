@@ -1,22 +1,24 @@
 <template>
-    <layout>
-        push
-    </layout>
+    <section class="openTag">
+        Tag
+    </section>
 </template>
 
 <script>
     export default {
-        name: 'push',
+        name: 'openTag',
         data() {
             return {};
         },
         mounted() {
         },
         methods: {},
-        comments: {},
+        components: {},
     };
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+    .openTag {
+        height: 34px;
+    }
 </style>

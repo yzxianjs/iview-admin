@@ -4,11 +4,22 @@ import UserRouter from './UserRouter';
 import MenuRouter from './MenuRouter';
 
 Vue.use(Router);
+const originalPush = Router.prototype.push;
+Router.prototype.push = function push(location) {
+    return originalPush.call(this, location).catch(err => err);
+};
 
 const router = new Router({
     mode: 'history',
     base: process.env.BASE_URL,
     routes: [
+        {
+            path: '/',
+            redirect: {path: '/app'},
+            meta: {
+                title: '首页',
+            },
+        },
         {
             path: '/a',
             component: () => import('@/views/a.vue'),

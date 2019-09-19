@@ -9,17 +9,32 @@ export default [
     {
         path: '/dev',
         component: Dev,
+        meta: {
+            title: '开发管理',
+        },
     },
     {
         path: '/manager',
         component: Manager,
+        meta: {
+            title: '个人中心',
+        },
     },
     {
         path: '/app',
         component: App,
+        meta: {
+            title: '应用中心',
+        },
+        children: [
+            {
+                path: '/app/son',
+                component: () => import('@/views/son.vue'),
+                meta: {
+                    title: 'JAVA开发',
+                },
+            },
+        ],
     },
-    {
-        path: '/push',
-        component: Push,
-    },
+
 ];

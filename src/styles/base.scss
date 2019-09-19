@@ -1,0 +1,24 @@
+.el-scrollbar__thumb {
+  display: none;
+}
+
+.el-scrollbar__wrap {
+
+  overflow: scroll;
+  height: 100%;
+}
+
+//overflow:scroll; min-height:101%;
+.el-scrollbar {
+  height: 100%;
+}
+
+html {
+  overflow: -moz-scrollbars-vertical;
+}
+
+//设置下面的样式就可以了
+.el-menu {
+  border-right-width: 0;
+}
+
