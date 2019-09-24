@@ -1,8 +1,6 @@
 <template>
     <base-layout>
-        app
-        <el-divider></el-divider>
-        <router-view></router-view>
+        <el-divider>xxxxxxxxxxx</el-divider>
     </base-layout>
 </template>
 

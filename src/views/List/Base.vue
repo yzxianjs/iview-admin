@@ -1,17 +1,17 @@
 <template>
-    
+    <div class="base">base基本表单</div>
 </template>
 
 <script>
     export default {
-        name: '1',
+        name: 'Base',
         data() {
             return {};
         },
         mounted() {
         },
         methods: {},
-        comments: {},
+        components: {},
     };
 </script>
 

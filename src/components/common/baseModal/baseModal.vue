@@ -1,19 +1,20 @@
 <template>
-    <layout>
-        manager
-    </layout>
+    <section>
+
+        <slot></slot>
+    </section>
 </template>
 
 <script>
     export default {
-        name: 'manager',
+        name: 'baseModal',
         data() {
             return {};
         },
         mounted() {
         },
         methods: {},
-        comments: {},
+        components: {},
     };
 </script>
 

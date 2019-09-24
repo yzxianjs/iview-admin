@@ -36,12 +36,12 @@ class DB {
      * @param field 添加字段
      * @param value 添加的数组数据
      */
-    addData(field = [], value = []) {
-        let tileData = [[1, 10, 10], [1, 11, 11], [1, 10, 9], [1, 11, 9]];
+    addData(sql, value) {
+        // let tileData = [[1, 10, 10], [1, 11, 11], [1, 10, 9], [1, 11, 9]];
 
-        let insertSql2 = `insert into ${this.tableName}(${field.join(',')}) values(${',?'.repeat(field.length).substring(1)})`;
+        // let insertSql2 = `insert into ${this.tableName}(${field.join(',')}) values(${',?'.repeat(field.length).substring(1)})`;
         // console.log(insertSql2);
-        sqliteDB.insertData(insertSql2, value);
+        connention.insertData(sql, value);
     }
 }
 

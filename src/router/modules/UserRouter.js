@@ -1,5 +1,5 @@
 const _import = (path) => import(`@/views${path}`);
-import {importView, RenderRouterView, importComponent} from '../libs/utils';
+import {importView, RenderRouterView, importComponent} from '../../libs/utils';
 //用户注册/登录
 const Login = importView('/User/Login.vue');
 const Register = importView('/User/Register');

@@ -1,13 +1,14 @@
 <template>
     <el-container class="baseContainer " :class="sideBarClass">
-        <keep-alive>
-            <side-bar/>
-        </keep-alive>
+        <!--左边侧栏-->
+        <side-bar/>
         <el-container class="main-contain">
             <!--顶部导航-->
             <TopHeader/>
+
+            <!--内容区域-->
             <el-main class="content">
-                <slot></slot>
+                <router-view></router-view>
             </el-main>
         </el-container>
     </el-container>
@@ -49,6 +50,5 @@
     .content {
         width: 100%;
         height: 100%;
-        background: #bae1de;
     }
 </style>

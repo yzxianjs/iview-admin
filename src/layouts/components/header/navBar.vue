@@ -12,7 +12,7 @@
             <div class="search">
                 <i class="icon el-icon-search"></i>
             </div>
-
+            <a href="/test" type="success">测试</a>
         </el-col>
     </el-row>
 </template>

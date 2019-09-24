@@ -1,7 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import UserRouter from './UserRouter';
-import MenuRouter from './MenuRouter';
+import UserRouter from './modules/UserRouter';
+import MenuRouter from './modules/MenuRouter';
+import ListRouter from './modules/ListRouter';
 
 Vue.use(Router);
 const originalPush = Router.prototype.push;
@@ -15,18 +16,12 @@ const router = new Router({
     routes: [
         {
             path: '/',
-            redirect: {path: '/app'},
+            // redirect: {path: '/manager'},
+            component: () => import('@/layouts/baseLayout.vue'),
             meta: {
                 title: '首页',
+                icon: 'el-icon-edit',
             },
-        },
-        {
-            path: '/a',
-            component: () => import('@/views/a.vue'),
-        },
-        {
-            path: '/b',
-            component: () => import('@/views/About.vue'),
         },
         {
             path: '/test',
@@ -34,6 +29,7 @@ const router = new Router({
         },
         ...MenuRouter,
         ...UserRouter,
+        ...ListRouter,
     ],
 });
 router.beforeEach((to, form, next) => {
